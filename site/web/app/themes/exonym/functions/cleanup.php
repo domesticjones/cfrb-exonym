@@ -75,12 +75,6 @@ function remove_wp_ver_css_js($src) {
   return $src;
 }
 
-// Remove CF7 styling
-function cf7_deregister_styles() {
-  wp_deregister_style('contact-form-7');
-}
-add_action('wp_print_styles', 'cf7_deregister_styles', 100);
-
 // Remove comment count for pages
 function remove_pages_count_columns($defaults) {
   unset($defaults['comments']);

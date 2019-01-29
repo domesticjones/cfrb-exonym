@@ -1,0 +1,53 @@
+#footer-sponsors {
+  img {
+    display: block;
+    max-width: 10rem;
+    min-width: 8rem;
+    max-height: 6rem;
+    width: auto;
+    height: auto;
+  }
+
+  div {
+    @include grid(center, center);
+  }
+
+  .slick-slide {
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.sponsor-single {
+  padding: 2em;
+}
+
+.sponsors-heading {
+  position: relative;
+  color: $orange;
+  text-align: center;
+  font-weight: $font-normal;
+  font-size: 2.5em;
+
+  &::after {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $blue;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 0.5em;
+    background-color: $white;
+  }
+}

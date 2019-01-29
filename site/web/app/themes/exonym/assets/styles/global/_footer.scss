@@ -1,10 +1,84 @@
 /**
   Global Website Footer
   ---------------------------------------------------------------------- */
-.nav-footer {
-  @include navMenu(vertical);
+#footer {
+  background-color: $blue;
+  padding: 4vw 0;
+  color: $white;
+  font-family: $font-heading;
+  font-size: 1.25rem;
+
+  nav {
+    text-align: center;
+
+    ul {
+      @include listStripped();
+    }
+
+    .name {
+      display: none;
+    }
+  }
+
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .nav-social {
+    margin-top: 2vw;
+
+    ul {
+      @include listStripped(inline-block);
+
+      li {
+        margin: 0 1rem;
+      }
+    }
+
+    img {
+      height: 1.5rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .footer-nav {
+    @include grid(center);
+
+    margin-top: 2vw;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: $font-light;
+
+    a {
+      display: block;
+      padding: 1em;
+    }
+  }
 }
 
-/**
-  Responsive Breakpoints
-  ---------------------------------------------------------------------- */
+.logo-footer {
+  display: block;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto 2vw auto;
+}
+
+.copyright {
+  padding-top: 2vw;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  #footer .footer-nav {
+    display: none;
+  }
+}

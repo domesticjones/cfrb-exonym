@@ -1,7 +1,50 @@
-/**
-  Responsive Navigation
-  ---------------------------------------------------------------------- */
+#header-image,
+#content,
+#global-cta,
+#footer {
+  position: relative;
+  z-index: 998;
+}
 
-#responsive-nav-toggle {
-  @include hamburgerMenu(9, $black, 0.75);
+#nav-responsive {
+  @include grid(center, center, column);
+  @include transition(opacity 350ms ease);
+
+  position: fixed;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: transparentize($orange, 0.05);
+
+  &.is-active {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  ul {
+    @include listStripped();
+
+    li {
+      margin: 1rem 0;
+    }
+  }
+
+  a {
+    color: $white;
+    font-size: 1.35em;
+    padding: 0.5em;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+  }
+}
+
+#nav-close {
+  display: block;
+  width: 3rem;
+  margin-top: 2rem;
 }

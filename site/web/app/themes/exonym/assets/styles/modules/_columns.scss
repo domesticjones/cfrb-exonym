@@ -1,0 +1,61 @@
+#content {
+  background-color: $white;
+}
+
+.page-content {
+  padding: 4vw 0 2vw 0;
+}
+
+.page-section {
+  @include clearfix();
+
+  border-bottom: 1px solid $blue;
+  margin-bottom: 2vw;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.section-left,
+.section-right {
+  & > *:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.section-left {
+  width: 30%;
+  float: left;
+  padding-right: 2vw;
+}
+
+.section-right {
+  width: 70%;
+  float: right;
+  padding-left: 2vw;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1200px) {
+  .section-left {
+    width: 40%;
+    padding-left: 2rem;
+  }
+
+  .section-right {
+    width: 60%;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .section-left,
+  .section-right {
+    @include clearfix();
+
+    float: none;
+    width: 100%;
+    padding: 0 2rem;
+  }
+}

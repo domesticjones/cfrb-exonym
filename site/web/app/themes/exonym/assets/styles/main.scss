@@ -14,13 +14,19 @@
 /**
   Global Elements
   ---------------------------------------------------------------------- */
+@import "~slick-carousel/slick/slick.scss";
 @import "global/base";
-@import "global/navigation";
 @import "global/header";
+@import "global/header-sub";
 @import "global/footer";
+@import "global/navigation";
 
 /**
-  Exonym Plugins
+  Modules
   ---------------------------------------------------------------------- */
-// @import "../../../../plugins/exonym-content/sass/exonym-content.scss"; // Content Builder
-// @import "../../../../plugins/exonym-staff/exonym-staff.scss"; // Staff Plugin
+@import "modules/page-header";
+@import "modules/columns";
+@import "modules/left-column";
+@import "modules/links-list";
+@import "modules/global-cta";
+@import "modules/sponsors";

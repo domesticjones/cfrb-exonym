@@ -1,4 +1,6 @@
 require('jquery-visible');
+require('slick-carousel');
+require('../../node_modules/sticky-kit/dist/sticky-kit.min.js');
 
 jQuery(document).ready(() => {
 	// Wrap embedded objects and force them into 16:9
@@ -6,9 +8,17 @@ jQuery(document).ready(() => {
 
 	// HEADER: Responsive Nav Toggle
 	$('#responsive-nav-toggle').click(e => {
+		e.preventDefault();
 		const $this = $(e.currentTarget);
 		$this.toggleClass('is-active');
+		$('#nav-responsive').toggleClass('is-active');
 	});
+	$('#nav-close').click(() => {
+		$('#responsive-nav-toggle, #nav-responsive').removeClass('is-active');
+	});
+
+	// HEADER: Stick onScroll
+	$('#header').stick_in_parent();
 
 	// MODULES: Parallax
 	$(window).on('load resize scroll', () => {
@@ -27,8 +37,8 @@ jQuery(document).ready(() => {
 			// Boolean hit Check
 			if (dhit_read <= 0 && d_scroll <= dhit_out) {
 				const per_scrolled = (d_scroll - dhit_in) / (dhit_out - dhit_in);
-				const offset = (bg_diff * per_scrolled);
-				$thisBg.css('transform', `translateY(-${offset}px)`);
+				const offset = (bg_diff * per_scrolled * -1);
+				$thisBg.css('transform', `translateY(${offset}px)`);
 			}
 		});
 	});
@@ -47,5 +57,17 @@ jQuery(document).ready(() => {
 				$this.removeClass('is-visible');
 			}
 		});
+	});
+
+	// MODULE: sponsors
+	$('#footer-sponsors .wrap').slick({
+		speed: 7000,
+		autoplay: true,
+		autoplaySpeed: 1,
+		arrows: false,
+		slidesToShow: 1,
+		cssEase: 'linear',
+		variableWidth: true,
+		centerMode: true,
 	});
 });
