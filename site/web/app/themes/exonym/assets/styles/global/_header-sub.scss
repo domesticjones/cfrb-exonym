@@ -1,13 +1,10 @@
 #header-sub {
   @include grid(center, center);
+  @include navMenu(dropdown);
 
   background-color: $blue;
   text-align: center;
   padding: 1.5rem 0;
-
-  ul {
-    @include listStripped(inline-block);
-  }
 
   a {
     display: block;
@@ -22,6 +19,15 @@
 
     &:hover {
       color: $yellow;
+    }
+  }
+
+  .sub-menu {
+    background-color: $blue;
+    padding: 1rem 0;
+
+    a {
+      padding: 0.5rem 1.5rem;
     }
   }
 

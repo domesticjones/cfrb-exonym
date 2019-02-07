@@ -20,7 +20,9 @@
     </div>
     <footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
       <div class="wrap">
-        <img src="<?php echo asset_path('images/abgc-logo-white.svg'); ?>" alt="Logo for the Alameda Boys and Girls Club" class="logo-footer" />
+        <a href="https://alamedabgc.org/" target="_blank">
+          <img src="<?php echo asset_path('images/abgc-logo-white.svg'); ?>" alt="Logo for the Alameda Boys and Girls Club" class="logo-footer" />
+        </a>
         <nav class="nav-footer" role="navigation">
           <?php
             ex_contact('email', 'global');

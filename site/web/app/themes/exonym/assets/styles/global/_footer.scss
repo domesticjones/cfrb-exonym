@@ -29,7 +29,7 @@
   }
 
   .nav-social {
-    margin-top: 2vw;
+    margin-top: 1rem;
 
     ul {
       @include listStripped(inline-block);
@@ -51,7 +51,7 @@
   .footer-nav {
     @include grid(center);
 
-    margin-top: 2vw;
+    margin-top: 1rem;
     font-size: 0.75em;
     text-transform: uppercase;
     font-weight: $font-light;
@@ -61,20 +61,32 @@
       padding: 1em;
     }
   }
+
+  .nav-footer {
+    font-size: 1rem;
+
+    .footer-nav {
+      display: none;
+    }
+
+    .nav-social {
+      display: none;
+    }
+  }
 }
 
 .logo-footer {
   display: block;
   width: 50%;
-  max-width: 400px;
-  margin: 0 auto 2vw auto;
+  max-width: 200px;
+  margin: 0 auto 2rem auto;
 }
 
 .copyright {
-  padding-top: 2vw;
+  padding-top: 1rem;
   padding-bottom: 0;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {

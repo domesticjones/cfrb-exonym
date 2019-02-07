@@ -65,10 +65,14 @@
         }
 
         & > ul {
-          display: none;
           position: absolute;
           min-width: 100%;
           z-index: 999;
+          opacity: 0;
+          transform: scaleY(0);
+          transform-origin: top;
+
+          @include transition();
 
           li {
             display: block;
@@ -87,7 +91,8 @@
         }
 
         &:hover > ul {
-          display: block;
+          opacity: 1;
+          transform: scaleY(1);
         }
       }
     }

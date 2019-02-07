@@ -48,7 +48,7 @@
 			<?php endif; ?>
       <header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
         <div class="wrap">
-          <a href="<?php echo get_home_url(); ?>" class="logo-parent-header">
+	        <a href="https://alamedabgc.org/" target="_blank" class="logo-parent-header">
 						<img src="<?php echo asset_path('images/abgc-logo.svg'); ?>" alt="Logo for Alameda Boys and Girls Club" />
 					</a>
           <a href="<?php echo get_home_url(); ?>" class="logo-header">
